@@ -14,7 +14,7 @@ development -----*---------*---
 1. Template Design ( *29/3* ): 
   - Mingchoi
     - (x) Layout
-    - (o) Animation
+    - (x) Animation
 
 2. Information Collection ( *29/3* ):
   - ???
