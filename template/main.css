@@ -1,0 +1,108 @@
+
+body {
+	background: url('sig-hd-plain.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div {
+	font-family: 'Kannada Sangam MN';
+}
+
+.SIG-Logo {
+	display: inline-block;
+	width: 300px;
+	color: #fff;
+}
+.SIG-Logo img {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.SIG-Logo img:nth-child(1) {
+ 	animation-delay: 100ms;
+}
+.SIG-Logo img:nth-child(2) {
+ 	animation-delay: 150ms;
+}
+.SIG-Logo img:nth-child(3) {
+ 	animation-delay: 200ms;
+}
+.SIG-Logo img:nth-child(4) {
+ 	animation-delay: 250ms;
+}
+
+.Infinite {
+	animation-iteration-count: infinite;
+}
+
+.main-menu{
+	margin-top: 50px;
+}
+.main-menu-item {
+	padding-left: 50px;
+	letter-spacing: 3px;
+	animation-name: flipInX;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	transition-duration: 0.3s;
+}
+.main-menu-item:nth-child(1){
+ 	animation-delay: 300ms;	
+}
+.main-menu-item:nth-child(2){
+ 	animation-delay: 350ms;	
+}
+.main-menu-item:nth-child(3){
+ 	animation-delay: 400ms;	
+}
+.main-menu-item:nth-child(4){
+ 	animation-delay: 450ms;	
+}
+
+.main-menu-item:nth-child(5) {
+ 	animation-delay: 500ms;	
+}
+
+
+.main-menu-item:hover {
+	color: black;
+	/* background-color: #ef29a6; */
+}
+.main-menu-item:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ef29a6;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.main-menu-item:hover:before, .main-menu-item:focus:before, .main-menu-item:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+
+.overlay {
+
+}
+
+
+
+
+
