@@ -19,7 +19,7 @@ development -----*---------*---
 2. Information Collection ( *29/3* ):
   - KitChen
     - (o) Grab some data from the [old SIG site](http://playfulmedia.hk)
-    - (o) List out the data which is out dated *ASAP*, send it to leader or producer
+    - (x) List out the data which is out dated *ASAP*, send it to leader or producer
     - (o) Put these data in plain HTML format so they can put on the site easily
 
 3. JSON format design and api for SIG Works ( *29/3* ):
