@@ -17,10 +17,10 @@ development -----*---------*---
     - (x) Animation
 
 2. Information Collection ( *29/3* ):
-  - ???
-    - (x) Grab some data from the [old SIG site](http://playfulmedia.hk)
-    - (x) List out the data which is out dated *ASAP*, send it to leader or producer
-    - (x) Put these data in plain HTML format so they can put on the site easily
+  - KitChen
+    - (o) Grab some data from the [old SIG site](http://playfulmedia.hk)
+    - (o) List out the data which is out dated *ASAP*, send it to leader or producer
+    - (o) Put these data in plain HTML format so they can put on the site easily
 
 3. JSON format design and api for SIG Works ( *29/3* ):
   - ???
