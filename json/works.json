@@ -1,0 +1,28 @@
+{
+  "works" : [
+    {
+      "title" : "Deer City",
+      "genre" : "ANIMATION",
+      "authors" : "Pan Shihang",
+      "description" : "The inspiration of this animation is"
+    },
+    {
+      "title" : "Cemetery",
+      "genre" : "PHOTOGRAPHY",
+      "authors" : "Chu Kin Wai",
+      "description" : "World is developing day by day"
+    },
+    {
+      "title" : "The Mission of Bear Rescue",
+      "genre" : "GAME",
+      "authors" : "Choi Ka Yam, Law Fun Ching, Wu Suet Ying",
+      "description" : "The Mission of Bear Rescue is a shooting game"
+    },
+    {
+      "title" : "Robotic Arm",
+      "genre" : "INSTALLATIONS",
+      "authors" : "Chan Ting Cheong, Cheong Tai Leong, Yeung Ming Him",
+      "description" : "The project aims to explore interaction"
+    }
+  ]
+}
