@@ -23,10 +23,10 @@ development -----*---------*---
     - (o) Put these data in plain HTML format so they can put on the site easily
 
 3. JSON format design and api for SIG Works ( *29/3* ):
-  - ???
-    - (x) JSON format description
-    - (x) Sample JSON file with fake data for testing
-    - (x) Demo loading and display JSON data
+  - CK
+    - (o) JSON format description
+    - (o) Sample JSON file with fake data for testing
+    - (o) Demo loading and display JSON data
     - (x) Tool for adding new SIG works in the JSON file
       - hint: a Google Spreadsheet(Form) for SIG commitee to add data
       - then make a tool to converse the form to json
