@@ -6,28 +6,212 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <link rel="stylesheet" type="text/css" href="hover.css">
+<script>
+	function scrollTo(id){
+		scrollToElement(document.body, document.getElementById(id).offsetTop, 100);
+	}
+	function scrollToElement(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 2;
+
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        scrollToElement(element, to, duration - 2);
+    }, 10);
+}
+</script>
+
 </head>
 
 <body>
 	<div class="SIG-Logo">
+		<div onclick="scrollTo('Home')">
 		<img src="Logo-p1.png"></img>
 		<img src="Logo-p2.png"></img>
 		<img src="Logo-p3.png"></img>
 		<img src="Logo-p4.png"></img>
+		</div>
 
 		<div class="main-menu">
-			<div class="main-menu-item">WORKS</div>
-			<div class="main-menu-item">LOCATION</div>
-			<div class="main-menu-item">ABOUT</div>
-			<div class="main-menu-item">CREDIT</div>
-			<div class="main-menu-item">CONTACT</div>
+			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
+			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
+			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
+			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
+			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
 		</div>
 	</div>
 
-	<div class="overlay">
+	<div id="Home" class="standard-page">
+		home
+	</div>
+	<div id="Works" class="standard-page blackBG">
+		works
+	</div>
+	<div id="Location" class="standard-page-no-padding" onclick="this.className+=' map-enable'">
+		<iframe class="map" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcXz4zTcHBDQRza0WRR11UtY&key=AIzaSyCt-lP9NMy6ZFgGtPnVX_RDjfkKU2QNXL8" allowfullscreen></iframe>
+	</div>
+	<div id="About" class="standard-page">
+		<img src="http://sweb.cityu.edu.hk/bsccm/sig2015/images/aboutSigLogo.png" style="width: 80%"/>
+		<p class="text-description">
+			Special Interest Group (SIG) was initiated by Professor Liu, Zhi-Qiang in 2005 and funded by a three-year seed grant from City University of Hong Kong since 2006. SIGs enable in-depth learning and training for BScCM students from Year One of their undergraduate programme. In the SIGs students participate in supervised extracurricular, professional research and development activities, through which students will gain first-hand, practical experience in developing digital media products which will prepare them for successful careers in digital entertainment industry. Special Interest Groups are managed by BScCM student members with the supervision of academic staff associated with the BScCM program. Students sign up for SIGs on their own interests and passions. They initiate and participate in projects that cover games, animation and special visual effects, installation, web-radio, photography, and digital art design. Playful Media is SIG's annual Showcase. The first Playful Media in 2007 was a great success and also co-exhibited with a premier international professional event: Asia's 1st ACM SIGGRAPH Traveling Art Show. Recently, SIGs consist of 5 different groups with special interests in different areas, namely: Animation & Visual Effects, Photography / Graphic Design, Games, Installation & Interaction, and Web Radio.
+		</p>
+		<img src="http://sweb.cityu.edu.hk/bsccm/sig2015/images/aboutBsccmLogo.png" style="width: 80%"/>
+		<p class="text-description">
+			Future creative industry professionals are expected to excel their creativity with multiple capabilities, embracing both artistic and technological disciplines. School of Creative Media is uniquely poised to train innovative graduates in digital media field while Department of Computer Science has substantial experience in training professionals in computing technology. The BScCM programme combines core courses from both the School of Creative Media and the Department of Computer Science to produce graduates that bridge the gap between the technical and artistic side of the media field. The BScCM programme at City University of Hong Kong is the very first kind among Hong Kong higher education institutes at undergraduate level. Graduates from BScCM should be able to exploit the latest computing and media technologies in the creation of various media including computer games, computer animation and special effects, Internet applications and mobile devices and services. There are on 4 major focus areas for the BScCM program: Animation & Visual Effects, Photography / Graphic Design, Games, Installation and interaction.
+		</p>
+	</div>
+	<div id="Credit" class="standard-page blackBG">
+		<Table>
+		<tr>
+			<td><h2>Credit</h2></td>
+		</tr>
+		<tr>
+			<td>SIG Founder</td>
+			<td>Professor LIU Zhi-Qiang</td>
+		</tr>
+		<tr>
+			<td>2016 SIG Advisors</td>
+			<td>
+				DR. FU, HONG BO<br>
+				Mr. YIM Chun Pang<br>
+				Mr. LEUNG Hiu Ming Eddie<br>
+				Mr. LAM Kin Ying Ryan<br>
+				Dr. AU Kin Chung Oscar<br>
+				Ms. YIP Choi Fung Koala
+			</td>
+		</tr>
+		<tr>
+			<td>Student Advisor</td>
+			<td>
+				TSE Ka Ming<br>
+				LAM Beryl<br>
+				NG Siu Chi<br>
+				CHEUNG Kit Jacky<br>
+				TSUI Tsz Wai<br>
+				WONG Ho Yin<br>
+				SIN Yau Lung<br>
+				LAI Hoi Yan<br>
+				WONG Sze Nga<br>
+				LEE Chun Hin<br>
+				CHUN Tsz Fung<br>
+				WONG Wing Yan
+			</td>
+		</tr>
+		<tr>
+			<td>Producer</td>
+			<td>
+				Michelle Wong
+			</td>
+		</tr>
+		<tr>
+			<td>Assistant Producer</td>
+			<td>Leung Kin Lok</td>
+		</tr>
+		<tr>
+			<td>Secretary</td>
+			<td>Cheng Sin Yan</td>
+		</tr>
+		<tr>
+			<td>Fiancial Manager</td>
+			<td>Cheng Sin Yan</td>
+		</tr>
+		<tr>
+			<td>Technical Director </td>
+			<td>Leung Kin Lok</td>
+		</tr>
+		<tr>
+			<td>Technical Team Member</td>
+			<td>Fung Mo Yee<br>
+				Liu Ho Yee<br>
+				Lam Chun Hei
+			</td>
+		</tr>
+		<tr>
+			<td>AV Team</td>
+			<td>Fung Mo Yee<br>
+				Lo Chung Kei
+			</td>
+		</tr>
+		<tr>
+			<td>Animation Team Leader</td>
+			<td>Tsoi Yuk Yan</td>
+		</tr>
+		<tr>
+			<td>Animation Team</td>
+			<td>
+				Kam Hoi Tng<br>
+				Au Yeung Tsz Yan<br>
+				Tang Hon Lun<br>
+				Leung Wai Kwo<br>
+				SZE Hiu Yan
+			</td>
+		</tr>
+		<tr>
+			<td>Art Director</td>
+			<td>Au Yeung Tsz Yan</td>
+		</tr>
+		<tr>
+			<td>Art Team</td>
+			<td>
+				Lau Lok In<br>
+				SZE Hiu Yan<br>
+				Ng Tsun Ming
+			</td>
+		</tr>
+		<tr>
+			<td>Event Manager</td>
+			<td>
+				WOO Tsz Ting<br>
+				Fu Hiu Mei
+			</td>
+		</tr>
+		<tr>
+			<td>Website Team Leader</td>
+			<td>Choi Mang Ngai</td>
+		</tr>
+		<tr>
+			<td>Website Team</td>
+			<td>
+				Lo Chung Kei<br>
+				Wong Kit Chun
+			</td>
+		</tr>
+		<tr>
+			<td>App Team</td>
+			<td>LAU Koon Leung</td>
+		</tr>
+		<tr>
+			<td>Promotion Team</td>
+			<td>
+				Wong Sze Chung Christy<br>
+				Wan pui yin <br>
+				ChauTszLing<br>
+				Anson Cheung Tong Hing
+			</td>
+		</tr>
+		<tr>
+			<td>Group Leader</td>
+			<td>
+				Cheung Kam Wing<br>
+				Lam Chun Hei<br>
+				Liu Ho Yee<br>
+				Chan Suet Man<br>
+				Ng Hon Wah
+			</td>
+		</tr>
+		</Table>
+	</div>
+	<div id="Contact" class="standard-page">
+		<h1>Contact</h1>
+		<p>Producer: Michelle Wong</p>
+		<p>Assistant Producer: Leung Kin Lok</p>
+		<p>Website Team Leader: Choi Mang Ngai</p>
+		<p>Email Contact: info@playfulmedia.hk</p>
 	</div>
 
-
-	
+	<div class="bg-video-wrapper">
+		<video src="sig-hd.mov" poster="sig-hd.png" autoplay loop />
+	</div>
 </body>
 </html>

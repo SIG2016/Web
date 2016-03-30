@@ -1,3 +1,9 @@
+* {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
 	background: url('sig-hd-plain.png') no-repeat center center fixed;
@@ -5,6 +11,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+  scroll-behavior: smooth;
 }
 
 div {
@@ -12,9 +19,15 @@ div {
 }
 
 .SIG-Logo {
-	display: inline-block;
-	width: 300px;
+  position: fixed;
+	width: 310px;
+  padding: 5px;
+  height: 100vh;
 	color: #fff;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  cursor: pointer;
 }
 .SIG-Logo img {
   animation-name: fadeInLeft;
@@ -48,6 +61,7 @@ div {
 	animation-duration: 1s;
 	animation-fill-mode: both;
 	transition-duration: 0.3s;
+  cursor: pointer;
 }
 .main-menu-item:nth-child(1){
  	animation-delay: 300ms;	
@@ -69,7 +83,6 @@ div {
 
 .main-menu-item:hover {
 	color: black;
-	/* background-color: #ef29a6; */
 }
 .main-menu-item:before {
   content: "";
@@ -98,11 +111,64 @@ div {
 }
 
 
-.overlay {
-
+.standard-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 315px;
+  padding-right: 5px;
+  min-height: 100vh;
+  text-align: center;
 }
 
+.standard-page-no-padding {
+  padding-left: 310px;
+  min-height: 100vh;
+  text-align: center;
+}
 
+.full-page {
+  padding: 0;
+  min-height: 100vh;
+}
 
+.text-description {
+  text-align: left;
+}
 
+.blackBG {
+  background-color: rgba(0,0,0,0.7);
+}
+.whiteBG {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.map {
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.map-enable .map {
+  pointer-events: auto;
+}
+
+.bg-video-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.bg-video-wrapper video { 
+  object-fit: cover;
+  width:100%;
+  height:100%;
+}
 
