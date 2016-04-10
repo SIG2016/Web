@@ -6,7 +6,7 @@
 }
 
 body {
-	background: url('sig-hd-plain.png') no-repeat center center fixed;
+	background: url('sig-hd.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -170,5 +170,44 @@ div {
   object-fit: cover;
   width:100%;
   height:100%;
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outter-center-box {
+  position: relative;
+  height: 100vh;
+}
+
+.title-line {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  height: 1px;
+  background: #fff;
+}
+
+.home-left-info {
+  text-align: left;
+  position: absolute;
+  left: 10px;
+  bottom: 50px;
+}
+
+.home-right-info {
+  text-align: right;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.home-left-info-address {
+  font-size: 12px;
 }
 

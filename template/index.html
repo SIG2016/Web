@@ -34,7 +34,9 @@
 		</div>
 
 		<div class="main-menu">
+			<!--
 			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
+			-->
 			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
 			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
 			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
@@ -42,30 +44,56 @@
 		</div>
 	</div>
 
-	<div id="Home" class="standard-page">
-		home
+	<div id="Home" class="standard-page-no-padding">
+		<div class="outter-center-box">
+			<div class="home-left-info">
+				<p>17/06/16 - 25/06/16</p>
+				<p>11:00 - 19:00</p>
+				<h2>CMC Gallery L3</h2>
+				<span class="home-left-info-address">
+					<p>Run Run Shaw</p>
+					<p>Creative Media Centre</p>
+					<p>18 Tat Hong Avenue</p>
+					<p>Knowloon Tong</p>
+				</span>
+				<p>info@playfulmedia.hk</p>
+			</div>
+			<div class="home-right-info">
+				<h2>Open Ceremony</h2>
+				<p>18/06/16</p>
+				<p>Reception 14:00</p>
+				<p>Opening 14:30</p>
+			</div>
+		</div>
+
 	</div>
+	<!--
 	<div id="Works" class="standard-page blackBG">
 		works
 	</div>
+	-->
 	<div id="Location" class="standard-page-no-padding" onclick="this.className+=' map-enable'">
 		<iframe class="map" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcXz4zTcHBDQRza0WRR11UtY&key=AIzaSyCt-lP9NMy6ZFgGtPnVX_RDjfkKU2QNXL8" allowfullscreen></iframe>
 	</div>
 	<div id="About" class="standard-page">
-		<img src="http://sweb.cityu.edu.hk/bsccm/sig2015/images/aboutSigLogo.png" style="width: 80%"/>
+		<img src="aboutSigLogo.png" style="width: 30%; min-width: 300px; float: left"/>
+		<h1>Special Interest Group (SIG)</h1>
+		<hr class="title-line">
 		<p class="text-description">
 			Special Interest Group (SIG) was initiated by Professor Liu, Zhi-Qiang in 2005 and funded by a three-year seed grant from City University of Hong Kong since 2006. SIGs enable in-depth learning and training for BScCM students from Year One of their undergraduate programme. In the SIGs students participate in supervised extracurricular, professional research and development activities, through which students will gain first-hand, practical experience in developing digital media products which will prepare them for successful careers in digital entertainment industry. Special Interest Groups are managed by BScCM student members with the supervision of academic staff associated with the BScCM program. Students sign up for SIGs on their own interests and passions. They initiate and participate in projects that cover games, animation and special visual effects, installation, web-radio, photography, and digital art design. Playful Media is SIG's annual Showcase. The first Playful Media in 2007 was a great success and also co-exhibited with a premier international professional event: Asia's 1st ACM SIGGRAPH Traveling Art Show. Recently, SIGs consist of 5 different groups with special interests in different areas, namely: Animation & Visual Effects, Photography / Graphic Design, Games, Installation & Interaction, and Web Radio.
 		</p>
-		<img src="http://sweb.cityu.edu.hk/bsccm/sig2015/images/aboutBsccmLogo.png" style="width: 80%"/>
+		<div style="height: 100px"></div>
+		<img src="aboutBsccmLogo.png" style="width: 30%; min-width: 300px; float: left"/>
+		<h1>BSc - Creative Media</h1>
+		<hr class="title-line">
 		<p class="text-description">
 			Future creative industry professionals are expected to excel their creativity with multiple capabilities, embracing both artistic and technological disciplines. School of Creative Media is uniquely poised to train innovative graduates in digital media field while Department of Computer Science has substantial experience in training professionals in computing technology. The BScCM programme combines core courses from both the School of Creative Media and the Department of Computer Science to produce graduates that bridge the gap between the technical and artistic side of the media field. The BScCM programme at City University of Hong Kong is the very first kind among Hong Kong higher education institutes at undergraduate level. Graduates from BScCM should be able to exploit the latest computing and media technologies in the creation of various media including computer games, computer animation and special effects, Internet applications and mobile devices and services. There are on 4 major focus areas for the BScCM program: Animation & Visual Effects, Photography / Graphic Design, Games, Installation and interaction.
 		</p>
 	</div>
 	<div id="Credit" class="standard-page blackBG">
-		<Table>
-		<tr>
-			<td><h2>Credit</h2></td>
-		</tr>
+		<h1>Credit</h1>
+		<hr class="title-line">
+		<Table style="margin-left: auto; margin-right: auto">
 		<tr>
 			<td>SIG Founder</td>
 			<td>Professor LIU Zhi-Qiang</td>
@@ -202,12 +230,17 @@
 		</tr>
 		</Table>
 	</div>
-	<div id="Contact" class="standard-page">
-		<h1>Contact</h1>
-		<p>Producer: Michelle Wong</p>
-		<p>Assistant Producer: Leung Kin Lok</p>
-		<p>Website Team Leader: Choi Mang Ngai</p>
-		<p>Email Contact: info@playfulmedia.hk</p>
+	<div id="Contact" class="standard-page-no-padding">
+		<div class="outter-center-box">
+			<div class="center-box">
+				<h1>Contact</h1>
+				<hr class="title-line">
+				<p>Producer: Michelle Wong</p>
+				<p>Assistant Producer: Leung Kin Lok</p>
+				<p>Website Team Leader: Choi Mang Ngai</p>
+				<p>Email Contact: info@playfulmedia.hk</p>
+			</div>
+		</div>
 	</div>
 
 	<div class="bg-video-wrapper">
