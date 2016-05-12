@@ -188,6 +188,8 @@ div {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
   border: 0;
   height: 1px;
   background: #fff;
