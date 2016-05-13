@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <link rel="stylesheet" type="text/css" href="hover.css">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 <script>
 	function scrollTo(id){
 		scrollToElement(document.body, document.getElementById(id).offsetTop, 100);
@@ -38,9 +39,11 @@
 			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
 			-->
 			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
+			<!--
 			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
 			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
 			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+			-->
 		</div>
 	</div>
 
@@ -76,6 +79,7 @@
 	<div id="Location" class="standard-page-no-padding" onclick="this.className+=' map-enable'">
 		<iframe class="map" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcXz4zTcHBDQRza0WRR11UtY&key=AIzaSyCt-lP9NMy6ZFgGtPnVX_RDjfkKU2QNXL8" allowfullscreen></iframe>
 	</div>
+	<!--
 	<div id="About" class="standard-page">
 		<img src="aboutSigLogo.png" style="width: 30%; min-width: 300px; float: left"/>
 		<h1>Special Interest Group (SIG)</h1>
@@ -243,6 +247,7 @@
 			</div>
 		</div>
 	</div>
+	-->
 
 	<div class="bg-video-wrapper">
 		<video src="sig-hd.mov" poster="sig-hd.png" autoplay loop />
