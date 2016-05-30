@@ -16,7 +16,6 @@ body {
 
 div {
   font-family: 'Quicksand', sans-serif;
-	/* font-family: 'Kannada Sangam MN'; */
 }
 
 .SIG-Logo {
@@ -28,7 +27,6 @@ div {
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: both;
-  cursor: pointer;
 }
 .SIG-Logo img {
   animation-name: fadeInLeft;
@@ -111,20 +109,15 @@ div {
   transform: scaleY(1);
 }
 
-
-.standard-page {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 315px;
-  padding-right: 5px;
-  min-height: 100vh;
-  text-align: center;
+.home-page {
+  position: relative;
+  padding-left: 0;
+  min-height: 100vh; 
 }
 
-.standard-page-no-padding {
+.standard-page {
   padding-left: 310px;
   min-height: 100vh;
-  text-align: center;
 }
 
 .full-page {
@@ -142,10 +135,13 @@ div {
 .whiteBG {
   background-color: rgba(255,255,255,0.1);
 }
+.purpleBG {
+  background-color: rgba(75,32,91,0.5);
+}
 
 .map {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   pointer-events: none;
 }
 
@@ -162,15 +158,24 @@ div {
   width: auto;
   height: auto;
   z-index: -100;
-  object-fit: cover;
+  /* object-fit: cover; */
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   overflow: hidden;
 }
 
 .bg-video-wrapper video { 
   object-fit: cover;
-  width:100%;
-  height:100%;
+  width: 100vw;
+  height: auto;
+}
+
+@media (max-aspect-ratio: 16/9){
+  .bg-video-wrapper video { 
+    object-fit: cover;
+    width: auto;
+    height: 100vh;
+  }
 }
 
 .center-box {
@@ -178,17 +183,16 @@ div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .outter-center-box {
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
 
 .title-line {
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 500px;
   margin-top: 0px;
   margin-bottom: 10px;
   border: 0;
@@ -196,21 +200,230 @@ div {
   background: #fff;
 }
 
-.home-left-info {
-  text-align: left;
-  position: absolute;
-  left: 10px;
-  bottom: 50px;
-}
-
 .home-right-info {
   text-align: right;
   position: absolute;
   right: 50px;
   bottom: 50px;
+  width: 250px;
+  pointer-events: none;
 }
 
-.home-left-info-address {
-  font-size: 12px;
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.work-thumbnail {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fb-icon {
+  margin-left: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+.logos {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.page-title {
+  padding: 30px;
+}
+
+.menu-button {
+  display: none;
+}
+
+.about-sig-logo {
+  width: 30%;
+  min-width: 300px;
+  float: left;
+}
+
+.about-bsccm-logo {
+  width: 30%;
+  min-width: 300px;
+  float: right;
+}
+
+.work-genre {
+  margin-right: 20px;
+  display: inline-block;
+  letter-spacing: 3px;
+  animation-name: flipInX;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.work-genre:hover {
+  color: black;
+}
+.work-genre:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ef29a6;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.work-genre:hover:before, .work-genre:focus:before, .work-genre:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-button-display {
+  display: none;
+}
+
+.side-menu {
+  display: none;
+}
+
+@media (max-width: 959px){
+  .SIG-Logo {
+    position: static;
+  }
+
+  .standard-page {
+    padding-left: 0px;
+  }
+
+}
+
+@media (max-width: 480px){
+
+  .logos {
+    display: none;
+  }
+  .main-menu {
+    display: none;
+  }
+  .fb-icon {
+    display: none;
+  }
+  .SIG-Logo {
+    width: auto;
+  }
+
+  .SIG-Logo-piece-container {
+    text-align: center;
+  }
+
+  .SIG-Logo-piece {
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+    height: auto;
+
+  }
+
+  .about-sig-logo {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-bsccm-logo {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .work-genre {
+    display: block;
+  }
+
+  .work-thumbnail {
+    width: 48vw;
+    height: 48vw;
+  }
+
+  .menu-button-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #EA5514;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+
+  .side-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.9);
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+
+  .menu-button:checked + .menu-button-display {
+    left: 80vw;
+  }
+
+  .menu-button:checked + .menu-button-display + .side-menu {
+    left: 0;
+  }
+
+  .fb-icon-side {
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .logos-side {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+
 }
 

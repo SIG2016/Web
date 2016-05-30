@@ -2,13 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SIG 2016 Web UI Prototype</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<title>SIG Playful Media Annual Showcase 2016</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <link rel="stylesheet" type="text/css" href="hover.css">
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 <script>
 	function scrollTo(id){
+		document.getElementById("side-menu-btn").checked = false;
 		scrollToElement(document.body, document.getElementById(id).offsetTop, 100);
 	}
 	function scrollToElement(element, to, duration) {
@@ -26,78 +28,109 @@
 </head>
 
 <body>
-	<div class="SIG-Logo">
-		<div onclick="scrollTo('Home')">
-		<img src="Logo-p1.png"></img>
-		<img src="Logo-p2.png"></img>
-		<img src="Logo-p3.png"></img>
-		<img src="Logo-p4.png"></img>
-		</div>
-
-		<div class="main-menu">
-			<!--
-			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
-			-->
-			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
-			<!--
-			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
-			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
-			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
-			-->
-		</div>
-	</div>
-
-	<div id="Home" class="standard-page-no-padding">
-		<div class="outter-center-box">
-			<div class="home-left-info">
+	<div id="Home" class="home-page">
+		<div class="SIG-Logo">
+			<div class="pointer SIG-Logo-piece-container" onclick="scrollTo('Home')">
+				<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
+				<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
+				<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
+				<img class="SIG-Logo-piece" src="Logo-p4.png"></img>
 			</div>
-			<div class="home-right-info">
-				<p>21/06/16 - 30/06/16</p>
-				<p>11:00 - 19:00</p>
-				<h2>CMC Gallery L3</h2>
-				<span class="home-left-info-address">
-					<p>Run Run Shaw</p>
-					<p>Creative Media Centre</p>
-					<p>18 Tat Hong Avenue</p>
-					<p>Knowloon Tong</p>
-				</span>
-				<p>info@playfulmedia.hk</p>	
-				<br>
-				<h2>Open Ceremony</h2>
-				<p>22/06/16</p>
-				<p>Reception 14:00</p>
-				<p>Opening 14:30</p>
+
+			<div class="main-menu pointer">
+				<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
+				<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
+				<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
+				<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
+				<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
 			</div>
+			<br>
+			<img class="fb-icon pointer" src="fb.png"/>
+			<img class="logos" src="logos.png"/>
+		</div>
+	
+
+		<div class="home-right-info">
+			<h2>SHOWCASE PERIOD</h2>
+			<hr>
+			<p>21.06 ► 30.06
+			<p>11:00 ﹣ 19:00</p>
+			<br>
+			<h2>VEUNE</h2>
+			<hr>
+			<h3>CMC GALLERY L3</h3>
+			<p>Run Run Shaw</p>
+			<p>Creative Media Center</p>
+			<p>18 Tat Hong Avenue</p>
+			<p>Kowloon Tong</p>
+			<p>Hong Kong</p>
 		</div>
 
 	</div>
-	<!--
+
 	<div id="Works" class="standard-page blackBG">
-		works
+		<div class="page-title">
+			<h1>WORKS</h1>
+			<p>
+				<a class="work-genre">Animation & Visual Effects</a>
+				<a class="work-genre">Game</a>
+				<a class="work-genre">Graphics & Design</a>
+				<a class="work-genre">Installation</a>
+				<a class="work-genre">Media Performance</a>
+				<a class="work-genre">Photography</a>
+			</p>
+		</div>
+		<center>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+			<div class="work-thumbnail"></div>
+		</center>
 	</div>
-	-->
-	<div id="Location" class="standard-page-no-padding" onclick="this.className+=' map-enable'">
+	<div id="Location" class="standard-page" onclick="this.className+=' map-enable'">
+		<div class="page-title">
+			<h1>LOCATION</h1>
+			<p>CMC GALLERY L3, Run Run Shaw Creative Media Center,</p>
+			<p>18 Tat Hong Avenue, Kowloon Tong, Hong Kong</p>
+		</div>
+
 		<iframe class="map" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcXz4zTcHBDQRza0WRR11UtY&key=AIzaSyCt-lP9NMy6ZFgGtPnVX_RDjfkKU2QNXL8" allowfullscreen></iframe>
 	</div>
-	<!--
-	<div id="About" class="standard-page">
-		<img src="aboutSigLogo.png" style="width: 30%; min-width: 300px; float: left"/>
-		<h1>Special Interest Group (SIG)</h1>
+	<div id="About" class="standard-page purpleBG">
+		<div class="page-title">
+			<h1>ABOUT</h1>
+		</div>
+		<img class="about-sig-logo" src="aboutSigLogo.png" />
+		<h1>Special Interest Group</h1>
 		<hr class="title-line">
 		<p class="text-description">
 			Special Interest Group (SIG) was initiated by Professor Liu, Zhi-Qiang in 2005 and funded by a three-year seed grant from City University of Hong Kong since 2006. SIGs enable in-depth learning and training for BScCM students from Year One of their undergraduate programme. In the SIGs students participate in supervised extracurricular, professional research and development activities, through which students will gain first-hand, practical experience in developing digital media products which will prepare them for successful careers in digital entertainment industry. Special Interest Groups are managed by BScCM student members with the supervision of academic staff associated with the BScCM program. Students sign up for SIGs on their own interests and passions. They initiate and participate in projects that cover games, animation and special visual effects, installation, web-radio, photography, and digital art design. Playful Media is SIG's annual Showcase. The first Playful Media in 2007 was a great success and also co-exhibited with a premier international professional event: Asia's 1st ACM SIGGRAPH Traveling Art Show. Recently, SIGs consist of 5 different groups with special interests in different areas, namely: Animation & Visual Effects, Photography / Graphic Design, Games, Installation & Interaction, and Web Radio.
 		</p>
 		<div style="height: 100px"></div>
-		<img src="aboutBsccmLogo.png" style="width: 30%; min-width: 300px; float: left"/>
+		<img class="about-bsccm-logo" src="aboutBsccmLogo.png"/>
 		<h1>BSc - Creative Media</h1>
 		<hr class="title-line">
 		<p class="text-description">
 			Future creative industry professionals are expected to excel their creativity with multiple capabilities, embracing both artistic and technological disciplines. School of Creative Media is uniquely poised to train innovative graduates in digital media field while Department of Computer Science has substantial experience in training professionals in computing technology. The BScCM programme combines core courses from both the School of Creative Media and the Department of Computer Science to produce graduates that bridge the gap between the technical and artistic side of the media field. The BScCM programme at City University of Hong Kong is the very first kind among Hong Kong higher education institutes at undergraduate level. Graduates from BScCM should be able to exploit the latest computing and media technologies in the creation of various media including computer games, computer animation and special effects, Internet applications and mobile devices and services. There are on 4 major focus areas for the BScCM program: Animation & Visual Effects, Photography / Graphic Design, Games, Installation and interaction.
 		</p>
+		<div style="height: 100px"></div>
 	</div>
 	<div id="Credit" class="standard-page blackBG">
-		<h1>Credit</h1>
-		<hr class="title-line">
+		<div class="page-title">
+			<h1>CREDIT</h1>
+		</div>
 		<Table style="margin-left: auto; margin-right: auto">
 		<tr>
 			<td>SIG Founder</td>
@@ -217,7 +250,6 @@
 		<tr>
 			<td>Promotion Team</td>
 			<td>
-				Wong Sze Chung Christy<br>
 				Wan pui yin <br>
 				ChauTszLing<br>
 				Anson Cheung Tong Hing
@@ -234,12 +266,14 @@
 			</td>
 		</tr>
 		</Table>
+		<div style="height: 100px"></div>
 	</div>
-	<div id="Contact" class="standard-page-no-padding">
+	<div id="Contact" class="standard-page">
+		<div class="page-title">
+			<h1>CONTACT</h1>
+		</div>
 		<div class="outter-center-box">
 			<div class="center-box">
-				<h1>Contact</h1>
-				<hr class="title-line">
 				<p>Producer: Michelle Wong</p>
 				<p>Assistant Producer: Leung Kin Lok</p>
 				<p>Website Team Leader: Choi Mang Ngai</p>
@@ -247,10 +281,33 @@
 			</div>
 		</div>
 	</div>
-	-->
 
 	<div class="bg-video-wrapper">
 		<video src="sig-hd.mov" poster="sig-hd.png" autoplay loop />
+	</div>
+
+	<input id="side-menu-btn" class="menu-button" type="checkbox"/>
+	<label class="menu-button-display" for="side-menu-btn"></label>
+	<div class="side-menu">
+		<div onclick="scrollTo('Home')">
+			<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
+			<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
+			<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
+			<img class="SIG-Logo-piece" src="Logo-p4.png"></img>
+		</div>
+
+		<div style="height: 50px"> </div>
+
+		<div class="main-menu-side pointer">
+			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
+			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
+			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
+			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
+			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+		</div>
+		<br>
+		<img class="fb-icon-side pointer" src="fb.png"/>
+		<img class="logos-side" src="logos.png"/>
 	</div>
 </body>
 </html>
