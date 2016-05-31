@@ -165,7 +165,6 @@ div {
 }
 
 .bg-video-wrapper video { 
-  object-fit: cover;
   width: 100vw;
   height: auto;
 }
@@ -173,8 +172,8 @@ div {
 @media (max-aspect-ratio: 16/9){
   .bg-video-wrapper video { 
     object-fit: cover;
-    width: auto;
     height: 100vh;
+    /* width: auto;  Safari have bug with this*/
   }
 }
 
