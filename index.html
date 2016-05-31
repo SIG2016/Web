@@ -52,6 +52,10 @@
 	        scrollToElement(element, to, duration - 2);
 	    }, 10);
 	}
+
+	function GotoFacebook(){
+		window.location.href = "https://www.facebook.com/SIG.PlayfulMedia/";
+	}
 </script>
 
 </head>
@@ -74,7 +78,7 @@
 				<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
 			</div>
 			<br>
-			<img class="fb-icon pointer" src="fb.png"/>
+			<img class="fb-icon pointer" src="fb.png" onclick="GotoFacebook()"/>
 			<img class="logos" src="Logos.png"/>
 		</div>
 	
@@ -110,6 +114,9 @@
 			</p>
 		</div>
 		<center>
+			<div style="height: 200px"></div>
+			<h1>Coming Soon</h1>
+			<!--
 			<div class="work-thumbnail"></div>
 			<div class="work-thumbnail"></div>
 			<div class="work-thumbnail"></div>
@@ -126,6 +133,7 @@
 			<div class="work-thumbnail"></div>
 			<div class="work-thumbnail"></div>
 			<div class="work-thumbnail"></div>
+		-->
 		</center>
 	</div>
 	<div id="Location" class="standard-page" onclick="this.className+=' map-enable'">
@@ -303,16 +311,19 @@
 		</div>
 		<div class="outter-center-box">
 			<div class="center-box">
-				<p>Producer: Michelle Wong</p>
-				<p>Assistant Producer: Leung Kin Lok</p>
-				<p>Website Team Leader: Choi Mang Ngai</p>
-				<p>Email Contact: info@playfulmedia.hk</p>
+				<p><h2>Producer</h2> Michelle Wong</p>
+				<div style="height: 5px"></div>
+				<p><h2>Assistant Producer</h2> Leung Kin Lok</p>
+				<div style="height: 5px"></div>
+				<p><h2>Website Team Leader</h2> Choi Mang Ngai</p>
+				<div style="height: 5px"></div>
+				<p><h2>Email Contact</h2> info@playfulmedia.hk</p>
 			</div>
 		</div>
 	</div>
 
 	<div class="bg-video-wrapper">
-		<video src="sig-hd.mov" poster="sig-hd.png" autoplay loop />
+		<video src="sig-hd.mp4" poster="sig-sd.gif" autoplay loop />
 	</div>
 
 	<input id="side-menu-btn" class="menu-button" type="checkbox"/>
@@ -335,7 +346,7 @@
 			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
 		</div>
 		<br>
-		<img class="fb-icon-side pointer" src="fb.png"/>
+		<img class="fb-icon-side pointer" src="fb.png" onclick="GotoFacebook()"/>
 		<img class="logos-side" src="Logos.png"/>
 	</div>
 </body>
