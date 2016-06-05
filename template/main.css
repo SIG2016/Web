@@ -127,6 +127,9 @@ div {
 
 .text-description {
   text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
 }
 
 .blackBG {
@@ -185,6 +188,14 @@ div {
   -webkit-transform: translate(-50%, -50%);
 }
 
+.contact-detail {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+
 .outter-center-box {
   position: relative;
   height: 80vh;
@@ -202,8 +213,8 @@ div {
 .home-right-info {
   text-align: right;
   position: absolute;
-  right: 50px;
-  bottom: 50px;
+  right: 30px;
+  top: 30px;
   width: 250px;
   pointer-events: none;
 }
@@ -239,7 +250,7 @@ div {
   height: auto;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 12px;
 }
 
 .page-title {
@@ -314,7 +325,53 @@ div {
   display: none;
 }
 
+.bottom-right-tri {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  color: #E3007E;
+}
+
+.sponsors-logo {
+  position: absolute;
+  bottom: 10px;
+  left: 320px;
+}
+
+.credit-table tr td {
+  vertical-align: top;
+  padding-bottom: 20px;
+  width: 200px;
+}
+
+.credit-table tr td:first-child {
+  text-align: right;
+  padding-right: 100px;
+  width: 300px;
+}
+
+#Mobile-Logos {
+  display: none;
+}
+
+.main-menu-organisations {
+  display: none;
+}
+
 @media (max-width: 959px){
+
+  #Mobile-Logos {
+    display: inherit;
+  }
+
+  .main-menu-organisations {
+    display: inherit;
+  }
+
+  .sponsors-logo {
+    display: none;
+  }
+
   .SIG-Logo {
     position: static;
   }
@@ -322,7 +379,6 @@ div {
   .standard-page {
     padding-left: 0px;
   }
-
 }
 
 @media (max-width: 480px){
@@ -422,6 +478,24 @@ div {
     bottom: 0;
     width: 100%;
     height: auto;
+  }
+
+  .home-right-info {
+    top: auto;
+    bottom: 5px;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  .contact-detail {
+    width: 300px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
   }
 
 }
