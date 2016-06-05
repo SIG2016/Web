@@ -228,10 +228,27 @@ div {
 }
 
 .work-thumbnail {
+  position: relative;
   display: inline-block;
   width: 200px;
   height: 200px;
-  background-color: #ccc;
+  background-color: #444;
+  background-image: url('sig-hd.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.work-thumbnail:hover {
+  opacity: 1;
+}
+
+.work-thumbnail div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .pointer {
@@ -356,6 +373,11 @@ div {
 
 .main-menu-organisations {
   display: none;
+}
+
+#bg-gif {
+  width: 100vw;
+  height: auto;
 }
 
 @media (max-width: 959px){

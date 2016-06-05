@@ -7,7 +7,9 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <link rel="stylesheet" type="text/css" href="hover.css">
+<link href="css/lightbox.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.2.4.min.js"></script>
 <script>
 	function detectIE() {
 	  var ua = window.navigator.userAgent;
@@ -34,6 +36,11 @@
 	  return false;
 	}
 
+	function detectIOS(){
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		return iOS;
+	}
+
 	function scrollTo(id){
 		if(detectIE() == false){
 			document.getElementById("side-menu-btn").checked = false;
@@ -52,7 +59,6 @@
 	        scrollToElement(element, to, duration - 2);
 	    }, 10);
 	}
-
 </script>
 
 </head>
@@ -101,26 +107,24 @@
 			</p>
 		</div>
 		<center>
-			<div style="height: 200px"></div>
-			<h1>Coming Soon</h1>
-			<!--
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-			<div class="work-thumbnail"></div>
-		-->
+			<a href="sig-hd.png" data-lightbox="work1" data-title="faskfjne<br>Future creative industry professionals are expected to excel their creativity with multiple capabilities, embracing both artistic and technological disciplines. School of Creative Media is uniquely poised to train innovative graduates in digital media field while Department of Computer Science has substantial experience in training professionals in computing technology. "><div class="work-thumbnail"><div>SIG Showcase 2016</div></div></a>
+			<a href="sig-sd.gif" data-lightbox="work1" ></a>
+			<div class="work-thumbnail"><div>SIG Showcase 2016 on0798989 hj</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
 		</center>
 	</div>
 	<div id="Location" class="standard-page" onclick="this.className+=' map-enable'">
@@ -367,8 +371,9 @@
 		</div>
 	</div>
 
-	<div class="bg-video-wrapper">
-		<video src="sig-hd.mp4" poster="sig-sd.gif" autoplay loop />
+	<div id="bg-video-wrapper" class="bg-video-wrapper">
+		<video id="bg-video" src="sig-hd.mp4" poster="sig-sd.gif" autoplay loop />
+		<img id="bg-gif" src="sig-sd.gif" />
 	</div>
 
 	<div class="bottom-right-tri">▼</div>
@@ -383,7 +388,7 @@
 			<img class="SIG-Logo-piece" src="Logo-p4.png"></img>
 		</div>
 
-		<div style="height: 50px"> </div>
+		<div style="height: 50px"></div>
 
 		<div class="main-menu-side pointer">
 			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
@@ -397,5 +402,12 @@
 		<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon-side pointer" src="fb.png"/></a>
 		<img class="logos-side" src="Logos.png"/>
 	</div>
+	<div id="work-overlay"></div>
+	<script>
+		if(detectIOS()){
+			document.getElementById("bg-video-wrapper").innerHTML = '<img id="bg-gif" src="sig-sd.gif" />';
+		 }
+	</script>
+	<script src="js/lightbox.min.js"></script>
 </body>
 </html>
