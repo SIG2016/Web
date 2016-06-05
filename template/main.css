@@ -1,0 +1,524 @@
+* {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	background: url('sig-hd.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  scroll-behavior: smooth;
+}
+
+div {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.SIG-Logo {
+  position: fixed;
+	width: 310px;
+  padding: 5px;
+  height: 100vh;
+	color: #fff;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.SIG-Logo img {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.SIG-Logo img:nth-child(1) {
+ 	animation-delay: 100ms;
+}
+.SIG-Logo img:nth-child(2) {
+ 	animation-delay: 150ms;
+}
+.SIG-Logo img:nth-child(3) {
+ 	animation-delay: 200ms;
+}
+.SIG-Logo img:nth-child(4) {
+ 	animation-delay: 250ms;
+}
+
+.Infinite {
+	animation-iteration-count: infinite;
+}
+
+.main-menu{
+	margin-top: 50px;
+}
+.main-menu-item {
+	padding-left: 50px;
+	letter-spacing: 3px;
+	animation-name: flipInX;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	transition-duration: 0.3s;
+  cursor: pointer;
+}
+.main-menu-item:nth-child(1){
+ 	animation-delay: 300ms;	
+}
+.main-menu-item:nth-child(2){
+ 	animation-delay: 350ms;	
+}
+.main-menu-item:nth-child(3){
+ 	animation-delay: 400ms;	
+}
+.main-menu-item:nth-child(4){
+ 	animation-delay: 450ms;	
+}
+
+.main-menu-item:nth-child(5) {
+ 	animation-delay: 500ms;	
+}
+
+
+.main-menu-item:hover {
+	color: black;
+}
+.main-menu-item:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ef29a6;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.main-menu-item:hover:before, .main-menu-item:focus:before, .main-menu-item:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.home-page {
+  position: relative;
+  padding-left: 0;
+  min-height: 100vh; 
+}
+
+.standard-page {
+  padding-left: 310px;
+  min-height: 100vh;
+}
+
+.full-page {
+  padding: 0;
+  min-height: 100vh;
+}
+
+.text-description {
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+.blackBG {
+  background-color: rgba(0,0,0,0.7);
+}
+.whiteBG {
+  background-color: rgba(255,255,255,0.1);
+}
+.purpleBG {
+  background-color: rgba(75,32,91,0.5);
+}
+
+.map {
+  width: 100%;
+  height: 80vh;
+  pointer-events: none;
+}
+
+.map-enable .map {
+  pointer-events: auto;
+}
+
+.bg-video-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  /* object-fit: cover; */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.bg-video-wrapper video { 
+  width: 100vw;
+  height: auto;
+}
+
+@media (max-aspect-ratio: 16/9){
+  .bg-video-wrapper video { 
+    object-fit: cover;
+    height: 100vh;
+    /* width: auto;  Safari have bug with this*/
+  }
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.contact-detail {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+
+.outter-center-box {
+  position: relative;
+  height: 80vh;
+}
+
+.title-line {
+  max-width: 500px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: 0;
+  height: 1px;
+  background: #fff;
+}
+
+.home-right-info {
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 250px;
+  pointer-events: none;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.work-thumbnail {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #444;
+  background-image: url('sig-hd.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.work-thumbnail:hover {
+  opacity: 1;
+}
+
+.work-thumbnail div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fb-icon {
+  margin-left: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+.logos {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+}
+
+.page-title {
+  padding: 30px;
+}
+
+.menu-button {
+  display: none;
+}
+
+.about-sig-logo {
+  width: 30%;
+  min-width: 300px;
+  float: left;
+}
+
+.about-bsccm-logo {
+  width: 30%;
+  min-width: 300px;
+  float: right;
+}
+
+.work-genre {
+  margin-right: 20px;
+  display: inline-block;
+  letter-spacing: 3px;
+  animation-name: flipInX;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.work-genre:hover {
+  color: black;
+}
+.work-genre:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ef29a6;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.work-genre:hover:before, .work-genre:focus:before, .work-genre:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-button-display {
+  display: none;
+}
+
+.side-menu {
+  display: none;
+}
+
+.bottom-right-tri {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  color: #E3007E;
+}
+
+.sponsors-logo {
+  position: absolute;
+  bottom: 10px;
+  left: 320px;
+}
+
+.credit-table tr td {
+  vertical-align: top;
+  padding-bottom: 20px;
+  width: 200px;
+}
+
+.credit-table tr td:first-child {
+  text-align: right;
+  padding-right: 100px;
+  width: 300px;
+}
+
+#Mobile-Logos {
+  display: none;
+}
+
+.main-menu-organisations {
+  display: none;
+}
+
+#bg-gif {
+  width: 100vw;
+  height: auto;
+}
+
+@media (max-width: 959px){
+
+  #Mobile-Logos {
+    display: inherit;
+  }
+
+  .main-menu-organisations {
+    display: inherit;
+  }
+
+  .sponsors-logo {
+    display: none;
+  }
+
+  .SIG-Logo {
+    position: static;
+  }
+
+  .standard-page {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .logos {
+    display: none;
+  }
+  .main-menu {
+    display: none;
+  }
+  .fb-icon {
+    display: none;
+  }
+  .SIG-Logo {
+    width: auto;
+  }
+
+  .SIG-Logo-piece-container {
+    text-align: center;
+  }
+
+  .SIG-Logo-piece {
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+    height: auto;
+
+  }
+
+  .about-sig-logo {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-bsccm-logo {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .work-genre {
+    display: block;
+  }
+
+  .work-thumbnail {
+    width: 48vw;
+    height: 48vw;
+  }
+
+  .menu-button-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #EA5514;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+
+  .side-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.9);
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+
+  .menu-button:checked + .menu-button-display {
+    left: 80vw;
+  }
+
+  .menu-button:checked + .menu-button-display + .side-menu {
+    left: 0;
+  }
+
+  .fb-icon-side {
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .logos-side {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-right-info {
+    top: auto;
+    bottom: 5px;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  .contact-detail {
+    width: 300px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+}
+

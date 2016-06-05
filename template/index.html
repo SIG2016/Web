@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<title>SIG Playful Media Annual Showcase 2016</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="hover.css">
+<link href="css/lightbox.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+	    // IE 10 or older => return version number
+	    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+	    // IE 11 => return version number
+	    var rv = ua.indexOf('rv:');
+	    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+	    // Edge (IE 12+) => return version number
+	    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	function detectIOS(){
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		return iOS;
+	}
+
+	function scrollTo(id){
+		if(detectIE() == false){
+			document.getElementById("side-menu-btn").checked = false;
+			scrollToElement(document.body, document.getElementById(id).offsetTop, 100);
+		} else {
+			location.hash = "#" + id;
+		}
+	}
+
+	function scrollToElement(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 2;
+	    setTimeout(function() {
+	        element.scrollTop = element.scrollTop + perTick;
+	        scrollToElement(element, to, duration - 2);
+	    }, 10);
+	}
+</script>
+
+</head>
+
+<body>
+	<div id="Home" class="home-page">
+		<div class="SIG-Logo">
+			<div class="pointer SIG-Logo-piece-container" onclick="scrollTo('Home')">
+				<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
+				<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
+				<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
+				<img class="SIG-Logo-piece" src="Logo-p4.png"></img>
+			</div>
+
+			<div class="main-menu pointer">
+				<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
+				<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
+				<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
+				<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
+				<div class="main-menu-item main-menu-organisations" onclick="scrollTo('Mobile-Logos')">ORGANISATIONS</div>
+				<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+			</div>
+			<br>
+			<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon pointer" src="fb.png"/></a>
+			<img class="logos" src="Logos.png"/>
+		</div>
+		<div class="home-right-info">
+			<img src="home-info.png"/>
+		</div>
+		<div class="sponsors-logo">
+			<img src="sponsors.png" />
+		</div>
+
+	</div>
+
+	<div id="Works" class="standard-page blackBG">
+		<div class="page-title">
+			<h1>WORKS</h1>
+			<p>
+				<a class="work-genre">Animation & Visual Effects</a>
+				<a class="work-genre">Game</a>
+				<a class="work-genre">Graphics & Design</a>
+				<a class="work-genre">Installation</a>
+				<a class="work-genre">Media Performance</a>
+				<a class="work-genre">Photography</a>
+			</p>
+		</div>
+		<center>
+			<a href="sig-hd.png" data-lightbox="work1" data-title="faskfjne<br>Future creative industry professionals are expected to excel their creativity with multiple capabilities, embracing both artistic and technological disciplines. School of Creative Media is uniquely poised to train innovative graduates in digital media field while Department of Computer Science has substantial experience in training professionals in computing technology. "><div class="work-thumbnail"><div>SIG Showcase 2016</div></div></a>
+			<a href="sig-sd.gif" data-lightbox="work1" ></a>
+			<div class="work-thumbnail"><div>SIG Showcase 2016 on0798989 hj</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+			<div class="work-thumbnail"><div>SIG Showcase 2016</div></div>
+		</center>
+	</div>
+	<div id="Location" class="standard-page" onclick="this.className+=' map-enable'">
+		<div class="page-title">
+			<h1>LOCATION</h1>
+			<p><span style="font-size: 20px">CMC GALLERY L3</span>, Run Run Shaw Creative Media Center,</p>
+			<p>18 Tat Hong Avenue, Kowloon Tong, Hong Kong</p>
+		</div>
+
+		<iframe class="map" width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcXz4zTcHBDQRza0WRR11UtY&key=AIzaSyCt-lP9NMy6ZFgGtPnVX_RDjfkKU2QNXL8" allowfullscreen></iframe>
+	</div>
+	<div id="About" class="standard-page purpleBG">
+		<div class="page-title">
+			<h1>ABOUT</h1>
+		</div>
+		<img class="about-sig-logo" src="aboutSigLogo.png" />
+		<h1>Special Interest Group</h1>
+		<hr class="title-line">
+		<p class="text-description">
+			Special Interest Group (SIG) was initiated by Professor Liu, Zhi-Qiang in 2005 and funded by a three-year seed grant from City University of Hong Kong since 2006. SIGs enable in-depth learning and training for BScCM students from Year One of their undergraduate programme. In the SIGs students participate in supervised extracurricular, professional research and development activities, through which students will gain first-hand, practical experience in developing digital media products which will prepare them for successful careers in digital entertainment industry. Special Interest Groups are managed by BScCM student members with the supervision of academic staff associated with the BScCM program. Students sign up for SIGs on their own interests and passions. They initiate and participate in projects that cover games, animation and special visual effects, installation, web-radio, photography, and digital art design. Playful Media is SIG's annual Showcase. The first Playful Media in 2007 was a great success and also co-exhibited with a premier international professional event: Asia's 1st ACM SIGGRAPH Traveling Art Show. Recently, SIGs consist of 5 different groups with special interests in different areas, namely: Animation & Visual Effects, Photography / Graphic Design, Games, Installation & Interaction, and Web Radio.
+		</p>
+		<div style="height: 100px"></div>
+		<img class="about-bsccm-logo" src="aboutBsccmLogo.png"/>
+		<h1>BSc - Creative Media</h1>
+		<hr class="title-line">
+		<p class="text-description">
+			Future creative industry professionals are expected to excel their creativity with multiple capabilities, embracing both artistic and technological disciplines. School of Creative Media is uniquely poised to train innovative graduates in digital media field while Department of Computer Science has substantial experience in training professionals in computing technology. The BScCM programme combines core courses from both the School of Creative Media and the Department of Computer Science to produce graduates that bridge the gap between the technical and artistic side of the media field. The BScCM programme at City University of Hong Kong is the very first kind among Hong Kong higher education institutes at undergraduate level. Graduates from BScCM should be able to exploit the latest computing and media technologies in the creation of various media including computer games, computer animation and special effects, Internet applications and mobile devices and services. There are on 4 major focus areas for the BScCM program: Animation & Visual Effects, Photography / Graphic Design, Games, Installation and interaction.
+		</p>
+		<div style="height: 100px"></div>
+	</div>
+
+	<div id="Credit" class="standard-page blackBG">
+		<div class="page-title">
+			<h1>CREDIT</h1>
+		</div>
+		<table class="credit-table" style="margin-left: auto; margin-right: auto">
+		<tr>
+			<td>Founder</td>
+			<td>Professor LIU Zhi-Qiang</td>
+		</tr>
+		<tr>
+			<td>SIG Advisors</td>
+			<td>
+				Dr. Au Kin Chung Oscar<br>
+				Dr. Fu Hong Bo<br>
+				Mr. Lam Kin Ying Ryan<br>
+				Mr. Leung Hiu Ming Eddie<br>
+				Mr. Yim Chun Pang<br>
+				Ms. Yip Choi Fung Koala<br>
+			</td>
+		</tr>
+		<tr>
+			<td>Student Advisor</td>
+			<td>
+				Cheung Kit Jacky<br>
+				Chun Tsz Fung<br>
+				Lai Hoi Yan<br>
+				Lam Beryl<br>
+				Lee Chun Hin<br>
+				Ng Siu Chi<br>
+				Sin Yau Lung<br>
+				Tse Ka Ming<br>
+				Tsui Tsz Wai<br>
+				Wong Ho Yin<br>
+				Wong Sze Nga<br>
+				Wong Wing Yan
+			</td>
+		</tr>
+		<tr>
+			<td>Alumni Advisors</td>
+			<td>
+				YY Kira Yeung
+			</td>
+		</tr>	
+	</table>
+	<center style="margin-top: 50px; margin-bottom: 30px">
+		<hr style="max-width: 200px">
+		COMMITTEE LIST
+		<hr style="max-width: 200px">
+	</center>
+	<table class="credit-table" style="margin-left: auto; margin-right: auto">
+		<tr>
+			<td>Producer</td>
+			<td>
+				Michelle Wong
+			</td>
+		</tr>
+		<tr>
+			<td>Assistant Producer</td>
+			<td>Leung Kin Lok</td>
+		</tr>
+		<tr>
+			<td>Event Manager</td>
+			<td>
+				Fu Hiu Mei<br>
+				WOO Tsz Ting
+			</td>
+		</tr>	
+		<tr>
+			<td>Secretary</td>
+			<td>Cheng Sin Yan</td>
+		</tr>
+		<tr>
+			<td>Technical Director</td>
+			<td>Leung Kin Lok</td>
+		</tr>
+		<tr>
+			<td>PR & Promotion Team</td>
+			<td>
+				Chau Tsz Ling<br>
+				Wan Pui Yin <br>
+				Wong Sze Chung Christy
+			</td>
+		</tr>
+		<tr>
+			<td>Fiancial Manager</td>
+			<td>Cheng Sin Yan</td>
+		</tr>
+		<tr>
+			<td>Art Director</td>
+			<td>Au Yeung Tsz Yan<br>
+				Lau Lok In (Deputy)
+			</td>
+		</tr>
+		<tr>
+			<td>Art Team</td>
+			<td>
+				Ng Tsun Ming<br>
+				SZE Hiu Yan
+			</td>
+		</tr>
+		<tr>
+			<td>Animation Team Leader</td>
+			<td>Tsoi Yuk Yan<br>
+				Tang Hon Lun (Deputy)
+			</td>
+		</tr>
+		<tr>
+			<td>Animation Team</td>
+			<td>
+				Kam Hoi Tng<br>
+				Leung Wai Kwo
+			</td>
+		</tr>
+		<tr>
+			<td>AV Team Leader</td>
+			<td>Fung Mo Yee</td>
+		</tr>
+		<tr>
+			<td>AV Team</td>
+			<td>Lo Chung Kei</td>
+		</tr>
+		<tr>
+			<td>Website Team Leader</td>
+			<td>Choi Mang Ngai</td>
+		</tr>
+		<tr>
+			<td>Website Team</td>
+			<td>
+				Lo Chung Kei<br>
+				Wong Kit Chun
+			</td>
+		</tr>
+		<tr>
+			<td>Technical Team Member</td>
+			<td>Cheung Kit Jacky<br>
+				Fung Mo Yee<br>
+				Lam Chun Hei<br>
+				Or Wai Yin
+			</td>
+		</tr>
+		<tr>
+			<td>Group Leader</td>
+		</tr>
+		<tr>
+			<td>
+				Animation & Visual Effect
+			</td>
+			<td>
+				Fu Hiu Mei<br>
+				Woo Tsz Ting
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Game
+			</td>
+			<td>
+				Cheung Kam Wing<br>
+				Lam Chun Hei
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Installation & Interaction
+			</td>
+			<td>
+				Choi Suet Man<br>
+				Ng Hon Wah
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Media Performance
+			</td>
+			<td>
+				Fu Hiu Mei<br>
+				Woo Tsz Ting
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Photography & Graphics
+			</td>
+			<td>
+				Liu Ho Yee	
+			</td>
+		</tr>
+		</table>
+		<div style="height: 100px"></div>
+	</div>
+	<div id="Mobile-Logos" class="standard-page">	
+		<div class="page-title">
+			<h1>ORGANISATIONS</h1>
+		</div>
+		<center>
+			<img src="mobile-logos.png" />
+		</center>
+	</div>
+	<div id="Contact" class="standard-page">
+		<div class="page-title">
+			<h1>CONTACT</h1>
+		</div>
+		<div class="outter-center-box">
+			<div class="contact-detail">
+				<p><h2>Producer</h2> Michelle Wong</p>
+				<div style="height: 5px"></div>
+				<p><h2>Assistant Producer</h2> Leung Kin Lok</p>
+				<div style="height: 5px"></div>
+				<p><h2>Website Team Leader</h2> Choi Mang Ngai</p>
+				<div style="height: 5px"></div>
+				<p><h2>Email Contact</h2> info@playfulmedia.hk</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="bg-video-wrapper" class="bg-video-wrapper">
+		<video id="bg-video" src="sig-hd.mp4" poster="sig-sd.gif" autoplay loop />
+		<img id="bg-gif" src="sig-sd.gif" />
+	</div>
+
+	<div class="bottom-right-tri">▼</div>
+
+	<input id="side-menu-btn" class="menu-button" type="checkbox"/>
+	<label class="menu-button-display" for="side-menu-btn"></label>
+	<div class="side-menu">
+		<div onclick="scrollTo('Home')">
+			<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
+			<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
+			<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
+			<img class="SIG-Logo-piece" src="Logo-p4.png"></img>
+		</div>
+
+		<div style="height: 50px"></div>
+
+		<div class="main-menu-side pointer">
+			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
+			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
+			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
+			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
+			<div class="main-menu-item" onclick="scrollTo('Mobile-Logos')">ORGANISATIONS</div>
+			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+		</div>
+		<br>
+		<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon-side pointer" src="fb.png"/></a>
+		<img class="logos-side" src="Logos.png"/>
+	</div>
+	<div id="work-overlay"></div>
+	<script>
+		if(detectIOS()){
+			document.getElementById("bg-video-wrapper").innerHTML = '<img id="bg-gif" src="sig-sd.gif" />';
+		 }
+	</script>
+	<script src="js/lightbox.min.js"></script>
+</body>
+</html>
