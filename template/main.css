@@ -172,12 +172,22 @@ div {
   height: auto;
 }
 
+#bg-gif {
+  width: 100vw;
+  height: auto;
+}
+
 @media (max-aspect-ratio: 16/9){
   .bg-video-wrapper video { 
     object-fit: cover;
     height: 100vh;
     /* width: auto;  Safari have bug with this*/
   }
+   #bg-gif {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+  } 
 }
 
 .center-box {
@@ -375,11 +385,6 @@ div {
   display: none;
 }
 
-#bg-gif {
-  width: 100vw;
-  height: auto;
-}
-
 @media (max-width: 959px){
 
   #Mobile-Logos {
@@ -484,7 +489,7 @@ div {
     left: 80vw;
   }
 
-  .menu-button:checked + .menu-button-display + .side-menu {
+  .menu-button:checked ~ .side-menu {
     left: 0;
   }
 
@@ -519,6 +524,21 @@ div {
     -webkit-transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  .home-right-info img {
+    max-height: 50vh;
+  }
+
+  .SIG-Logo-piece-container img {
+    max-width: 60vw;
+  }
+  
+  .text-description {
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
 
 }
 
