@@ -74,9 +74,11 @@ div {
 .main-menu-item:nth-child(4){
  	animation-delay: 450ms;	
 }
-
 .main-menu-item:nth-child(5) {
- 	animation-delay: 500ms;	
+  animation-delay: 500ms; 
+}
+.main-menu-item:nth-child(6) {
+  animation-delay: 500ms; 
 }
 
 
@@ -127,7 +129,6 @@ div {
 
 .text-description {
   text-align: left;
-  padding-left: 10px;
   padding-right: 10px;
   text-align: justify;
 }
@@ -292,12 +293,14 @@ div {
   width: 30%;
   min-width: 300px;
   float: left;
+  padding-right: 10px;
 }
 
 .about-bsccm-logo {
   width: 30%;
   min-width: 300px;
   float: right;
+  padding-left: 10px;
 }
 
 .work-genre {
@@ -368,13 +371,13 @@ div {
 .credit-table tr td {
   vertical-align: top;
   padding-bottom: 20px;
-  width: 200px;
+  min-width: 200px;
 }
 
 .credit-table tr td:first-child {
   text-align: right;
   padding-right: 100px;
-  width: 310px;
+  min-width: 300px;
 }
 
 #Mobile-Logos {
@@ -534,11 +537,37 @@ div {
   }
   
   .text-description {
-  text-align: left;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: justify;
-}
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+  }
+
+  .credit-table tr td {
+    width: 48vw;
+    min-width: 0;
+  }
+
+  .credit-table tr td:first-child {
+    text-align: right;
+    padding-right: 10px;
+    width: 48vw;
+    min-width: 0;
+  }
+
+  .text-description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about-sig-logo {
+    padding-right: 0;
+  }
+
+  .about-bsccm-logo {
+    padding-left: 0;
+  }
+
 
 }
 
