@@ -41,13 +41,19 @@
 		return iOS;
 	}
 
-	function scrollTo(id){
+	function scrollToId(id){
+		/*
 		if(detectIE() == false){
 			document.getElementById("side-menu-btn").checked = false;
 			scrollToElement(document.body, document.getElementById(id).offsetTop, 100);
 		} else {
 			location.hash = "#" + id;
 		}
+		*/
+		$('html, body').animate({
+		    scrollTop: $("#"+id).offset().top
+		}, 300);
+
 	}
 
 	function scrollToElement(element, to, duration) {
@@ -66,7 +72,7 @@
 <body>
 	<div id="Home" class="home-page">
 		<div class="SIG-Logo">
-			<div class="pointer SIG-Logo-piece-container" onclick="scrollTo('Home')">
+			<div class="pointer SIG-Logo-piece-container" onclick="scrollToId('Home')">
 				<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
 				<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
 				<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
@@ -74,12 +80,12 @@
 			</div>
 
 			<div class="main-menu pointer">
-				<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
-				<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
-				<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
-				<div class="main-menu-item" onclick="scrollTo('Credit')">CREDITS</div>
-				<div class="main-menu-item main-menu-organisations" onclick="scrollTo('Mobile-Logos')">ORGANISATIONS</div>
-				<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+				<div class="main-menu-item" onclick="scrollToId('Works')">WORKS</div>
+				<div class="main-menu-item" onclick="scrollToId('Location')">LOCATION</div>	
+				<div class="main-menu-item" onclick="scrollToId('About')">ABOUT</div>
+				<div class="main-menu-item" onclick="scrollToId('Credit')">CREDITS</div>
+				<div class="main-menu-item main-menu-organisations" onclick="scrollToId('Mobile-Logos')">ORGANISATIONS</div>
+				<div class="main-menu-item" onclick="scrollToId('Contact')">CONTACT</div>
 			</div>
 			<br>
 			<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon pointer" src="fb.png"/></a>
@@ -374,9 +380,9 @@
 	<div class="bottom-right-tri">▼</div>
 
 	<input id="side-menu-btn" class="menu-button" type="checkbox"/>
-	<label class="menu-button-display" for="side-menu-btn"></label>
+	<label class="menu-button-display" for="side-menu-btn">&#9776;</label>
 	<div class="side-menu">
-		<div onclick="scrollTo('Home')">
+		<div onclick="scrollToId('Home')">
 			<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
 			<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
 			<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
@@ -386,12 +392,12 @@
 		<div style="height: 50px"></div>
 
 		<div class="main-menu-side pointer">
-			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
-			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
-			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
-			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDITS</div>
-			<div class="main-menu-item" onclick="scrollTo('Mobile-Logos')">ORGANISATIONS</div>
-			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+			<div class="main-menu-item" onclick="scrollToId('Works')">WORKS</div>
+			<div class="main-menu-item" onclick="scrollToId('Location')">LOCATION</div>	
+			<div class="main-menu-item" onclick="scrollToId('About')">ABOUT</div>
+			<div class="main-menu-item" onclick="scrollToId('Credit')">CREDITS</div>
+			<div class="main-menu-item" onclick="scrollToId('Mobile-Logos')">ORGANISATIONS</div>
+			<div class="main-menu-item" onclick="scrollToId('Contact')">CONTACT</div>
 		</div>
 		<br>
 		<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon-side pointer" src="fb.png"/></a>

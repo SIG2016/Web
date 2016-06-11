@@ -468,8 +468,8 @@ div {
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #EA5514;
-    font-size: 30px;
+    /* background-color: #EA5514; */
+    font-size: 40px;
     line-height: 50px;
     text-align: center;
     -webkit-transition: left 0.3s;
