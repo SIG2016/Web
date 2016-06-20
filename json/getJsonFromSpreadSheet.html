@@ -21,12 +21,17 @@
  var GraphicURL = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/6/public/values?alt=json";
  var Media_PerformanceURL = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/7/public/values?alt=json";
 
- function Work(pName, genre,intro, owner, url){
+ function Work(pName, genre,intro, owner, url1, url2, url3, url4, url5){
 	this.name = pName;
 	this.genre = genre;
 	this.intro = intro;
 	this.owner = owner;
-	this.url = url;
+	this.url = new Array();
+	this.url.push(url1); // Works.url[1-5] to call url1 - url5 
+	this.url.push(url2); // Works.url[0] <-- wrong
+	this.url.push(url3);
+	this.url.push(url4);
+	this.url.push(url5);
 }
  
   Works = new Array();
@@ -41,7 +46,7 @@
 		async : false,
 		success: function(data){
 			$(data.feed.entry).each(function(){
- 				var work = new Work(this.gsx$projectname.$t,"Animation & VFX",this.gsx$description.$t,this.gsx$groupmembers.$t,this.gsx$videowithprogrammepackage.$t);
+ 				var work = new Work(this.gsx$projectname.$t,"Animation & VFX",this.gsx$description.$t,this.gsx$groupmembers.$t,this.gsx$videowithprogrammepackage.$t,this.gsx$url1.$t,this.gsx$url2.$t,this.gsx$url3.$t,this.gsx$url4.$t,this.gsx$url5.$t);
  				Works.push(work);
  			});
 		},
@@ -57,7 +62,7 @@
 		async : false,
 		success: function(data){
 			$(data.feed.entry).each(function(){
- 				var work = new Work(this.gsx$projectname.$t,"Game",this.gsx$description.$t,this.gsx$groupmembers.$t,"");
+ 				var work = new Work(this.gsx$projectname.$t,"Game",this.gsx$description.$t,this.gsx$groupmembers.$t,this.gsx$url1.$t,this.gsx$url2.$t,this.gsx$url3.$t,this.gsx$url4.$t,this.gsx$url5.$t);
  				Works.push(work);
  			});
 		},
@@ -73,7 +78,7 @@
 		async : false,
 		success: function(data){
 			$(data.feed.entry).each(function(){
- 				var work = new Work(this.gsx$projectname.$t,"Installation",this.gsx$description.$t,this.gsx$groupmembers.$t,"");
+ 				var work = new Work(this.gsx$projectname.$t,"Installation",this.gsx$description.$t,this.gsx$groupmembers.$t,this.gsx$url1.$t,this.gsx$url2.$t,this.gsx$url3.$t,this.gsx$url4.$t,this.gsx$url5.$t);
  				Works.push(work);
  			});
 		},
@@ -89,7 +94,7 @@
 		async : false,
 		success: function(data){
 			$(data.feed.entry).each(function(){
- 				var work = new Work(this.gsx$projectname.$t,"Photography",this.gsx$description.$t,this.gsx$projectmember.$t,"");
+ 				var work = new Work(this.gsx$projectname.$t,"Photography",this.gsx$description.$t,this.gsx$projectmember.$t,this.gsx$url1.$t,this.gsx$url2.$t,this.gsx$url3.$t,this.gsx$url4.$t,this.gsx$url5.$t);
  				Works.push(work);
  			});
 		},
@@ -105,7 +110,7 @@
 		async : false,
 		success: function(data){
 			$(data.feed.entry).each(function(){
- 				var work = new Work(this.gsx$projectname.$t,"Graphic",this.gsx$description.$t,this.gsx$projectmember.$t,"");
+ 				var work = new Work(this.gsx$projectname.$t,"Graphic",this.gsx$description.$t,this.gsx$projectmember.$t,this.gsx$url1.$t,this.gsx$url2.$t,this.gsx$url3.$t,this.gsx$url4.$t,this.gsx$url5.$t);
  				Works.push(work);
  			});
 		},
@@ -121,7 +126,7 @@
 		async : false,
 		success: function(data){
 			$(data.feed.entry).each(function(){
- 				 var work = new Work(this.gsx$projectname.$t,"Media Performance",this.gsx$description.$t,this.gsx$groupmembers.$t,"");
+ 				 var work = new Work(this.gsx$projectname.$t,"Media Performance",this.gsx$description.$t,this.gsx$groupmembers.$t,this.gsx$url1.$t,this.gsx$url2.$t,this.gsx$url3.$t,this.gsx$url4.$t,this.gsx$url5.$t);
  				Works.push(work);
  			});
 		},
@@ -129,6 +134,9 @@
 			window.alert("fail");
 		}	
 	});
+
+
+	
 
 function getWorksByGenre(genre){
 	var match = new Array();
@@ -146,10 +154,12 @@ function getWorkByTitle(title){
 			return Works[i];
 		}
 	}
-	return "no work found";
+	return "no works found";
 };	
+		text = Works[3].url[1]; 
+		document.getElementById("result").innerHTML = text;
 
-document.getElementById("genre").innerHTML = getWorkByTitle("AIAS").genre;
+
 </script>
 </body>
 </html>
