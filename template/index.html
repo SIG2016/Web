@@ -41,13 +41,19 @@
 		return iOS;
 	}
 
-	function scrollTo(id){
+	function scrollToId(id){
+		/*
 		if(detectIE() == false){
 			document.getElementById("side-menu-btn").checked = false;
 			scrollToElement(document.body, document.getElementById(id).offsetTop, 100);
 		} else {
 			location.hash = "#" + id;
 		}
+		*/
+		$('html, body').animate({
+		    scrollTop: $("#"+id).offset().top
+		}, 300);
+
 	}
 
 	function scrollToElement(element, to, duration) {
@@ -66,7 +72,7 @@
 <body>
 	<div id="Home" class="home-page">
 		<div class="SIG-Logo">
-			<div class="pointer SIG-Logo-piece-container" onclick="scrollTo('Home')">
+			<div class="pointer SIG-Logo-piece-container" onclick="scrollToId('Home')">
 				<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
 				<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
 				<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
@@ -74,12 +80,12 @@
 			</div>
 
 			<div class="main-menu pointer">
-				<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
-				<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
-				<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
-				<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
-				<div class="main-menu-item main-menu-organisations" onclick="scrollTo('Mobile-Logos')">ORGANISATIONS</div>
-				<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+				<div class="main-menu-item" onclick="scrollToId('Works')">WORKS</div>
+				<div class="main-menu-item" onclick="scrollToId('Location')">LOCATION</div>	
+				<div class="main-menu-item" onclick="scrollToId('About')">ABOUT</div>
+				<div class="main-menu-item" onclick="scrollToId('Credit')">CREDITS</div>
+				<div class="main-menu-item main-menu-organisations" onclick="scrollToId('Mobile-Logos')">ORGANISATIONS</div>
+				<div class="main-menu-item" onclick="scrollToId('Contact')">CONTACT</div>
 			</div>
 			<br>
 			<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon pointer" src="fb.png"/></a>
@@ -101,7 +107,6 @@
 				<a class="work-genre">Animation & Visual Effects</a>
 				<a class="work-genre">Games</a>
 				<a class="work-genre">Installation</a>
-				<a class="work-genre">Media Performance</a>
 				<a class="work-genre">Photography & Graphics</a>
 			</p>
 		</div>
@@ -145,7 +150,7 @@
 			<h1>ABOUT</h1>
 		</div>
 		<img class="about-sig-logo" src="aboutSigLogo.png" />
-		<h1>Special Interest Group</h1>
+		<h1>Playful Media by SIG</h1>
 		<hr class="title-line">
 		<p class="text-description">
 			Playful Media is an annual student showcase presented by Special Interest Group (SIG). The first Playful Media in 2007 was a great success and also co-exhibited with a premier international professional event: Asia's 1st ACM SIGGRAPH Traveling Art Show. Recently, SIGs consist of 4 different groups with special interests in different areas, namely: Animation & Visual Effects, Photography and Graphic Design, Games, Installation & Interaction.
@@ -163,18 +168,18 @@
 
 	<div id="Credit" class="standard-page blackBG">
 		<div class="page-title">
-			<h1>CREDIT</h1>
+			<h1>CREDITS</h1>
 		</div>
 		<table class="credit-table" style="margin-left: auto; margin-right: auto">
 		<tr>
 			<td>Founder</td>
-			<td>Professor LIU Zhi-Qiang</td>
+			<td>Professor Liu Zhi-Qiang</td>
 		</tr>
 		<tr>
 			<td>SIG Advisors</td>
 			<td>
 				Dr. Au Kin Chung Oscar<br>
-				Dr. Fu Hong Bo<br>
+				Dr. Fu Hongbo<br>
 				Mr. Lam Kin Ying Ryan<br>
 				Mr. Leung Hiu Ming Eddie<br>
 				Mr. Yim Chun Pang<br>
@@ -182,7 +187,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Student Advisor</td>
+			<td>Student Advisors</td>
 			<td>
 				Cheung Kit Jacky<br>
 				Lai Hoi Yan<br>
@@ -197,7 +202,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Alumni Advisors</td>
+			<td>Alumni Advisor</td>
 			<td>
 				YY Kira Yeung
 			</td>
@@ -220,7 +225,7 @@
 			<td>Leung Kin Lok</td>
 		</tr>
 		<tr>
-			<td>Event Manager</td>
+			<td>Event Managers</td>
 			<td>
 				Fu Hiu Mei<br>
 				Woo Tsz Ting
@@ -239,7 +244,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Fiancial Manager</td>
+			<td>Financial Manager</td>
 			<td>Wong Kai Min Michelle</td>
 		</tr>
 		<tr>
@@ -260,7 +265,7 @@
 			<td>Art Team</td>
 			<td>
 				Ng Tsun Ming<br>
-				SZE Hiu Yan
+				Sze Hiu Yan
 			</td>
 		</tr>
 		<tr>
@@ -300,7 +305,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Group Leader</td>
+			<td>Group Leaders</td>
 		</tr>
 		<tr>
 			<td>
@@ -356,7 +361,7 @@
 		</div>
 		<div class="outter-center-box">
 			<div class="contact-detail">
-				<p><h2>Producer</h2> Michelle Wong</p>
+				<p><h2>Producer</h2> Wong Kai Min Michelle</p>
 				<div style="height: 5px"></div>
 				<p><h2>Assistant Producer</h2> Leung Kin Lok</p>
 				<div style="height: 5px"></div>
@@ -375,9 +380,9 @@
 	<div class="bottom-right-tri">▼</div>
 
 	<input id="side-menu-btn" class="menu-button" type="checkbox"/>
-	<label class="menu-button-display" for="side-menu-btn"></label>
+	<label class="menu-button-display" for="side-menu-btn">&#9776;</label>
 	<div class="side-menu">
-		<div onclick="scrollTo('Home')">
+		<div onclick="scrollToId('Home')">
 			<img class="SIG-Logo-piece" src="Logo-p1.png"></img>
 			<img class="SIG-Logo-piece"  src="Logo-p2.png"></img>
 			<img class="SIG-Logo-piece" src="Logo-p3.png"></img>
@@ -387,12 +392,12 @@
 		<div style="height: 50px"></div>
 
 		<div class="main-menu-side pointer">
-			<div class="main-menu-item" onclick="scrollTo('Works')">WORKS</div>
-			<div class="main-menu-item" onclick="scrollTo('Location')">LOCATION</div>	
-			<div class="main-menu-item" onclick="scrollTo('About')">ABOUT</div>
-			<div class="main-menu-item" onclick="scrollTo('Credit')">CREDIT</div>
-			<div class="main-menu-item" onclick="scrollTo('Mobile-Logos')">ORGANISATIONS</div>
-			<div class="main-menu-item" onclick="scrollTo('Contact')">CONTACT</div>
+			<div class="main-menu-item" onclick="scrollToId('Works')">WORKS</div>
+			<div class="main-menu-item" onclick="scrollToId('Location')">LOCATION</div>	
+			<div class="main-menu-item" onclick="scrollToId('About')">ABOUT</div>
+			<div class="main-menu-item" onclick="scrollToId('Credit')">CREDITS</div>
+			<div class="main-menu-item" onclick="scrollToId('Mobile-Logos')">ORGANISATIONS</div>
+			<div class="main-menu-item" onclick="scrollToId('Contact')">CONTACT</div>
 		</div>
 		<br>
 		<a href="https://www.facebook.com/SIG.PlayfulMedia/" target="_blank"><img class="fb-icon-side pointer" src="fb.png"/></a>
